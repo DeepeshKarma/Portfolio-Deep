@@ -6,6 +6,7 @@
   <title>Portfolio</title>
   <!--Css file-->
   <link rel="stylesheet" href="css/style.css" >
+  <link rel="stylesheet" href="css/styles.css" >
   <link rel="stylesheet" href="css/skins/color-1.css" >
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
@@ -41,6 +42,25 @@
                 <li><a href="#portfolio" ><i class="fa fa-briefcase"></i> Portfolio</a></li>
                 <li><a href="#contact" ><i class="fa fa-comments"></i> Contact</a></li>
               </ul>
+        <!-- ==== Style switcher start  ======-->
+   <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')" ></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')" ></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')" ></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')" ></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')" ></span>
+    </div>
+   </div>
+   <!-- ==== Style switcher End  ======-->
+    
             </div>
           <!--Aside end-->
           <!--main content start-->
@@ -322,63 +342,190 @@
                   </div>
                   <div class="row">
                     <div class="portfolio-heading padd-15">
-                      <h2>My Last Projects :</h2>
+                      <h2>My Projects :</h2>
                     </div>
                   </div>
                   <div class="row">
-                    <!-- ===  portfolio item start === -->
-                      <div class="portfolio-item padd-15">
+                    <!-- ===  portfolio item start 1 === -->
+                      <div class="portfolio-item padd-15"><h4>Banking System</h4>
                         <div class="portfolio-item-inner shadow-dark">
                           <div class="portfolio-img">
-                            <img src="images/portfolio/portfolio-1.jpg" alt="project-image">
+                            <img src="images/portfolio/portfolio-1.jpg" alt="project-image" onclick="openModal('modal1')">
                           </div>
                         </div>
                       </div>
+                          <!-- Modal 1 -->
+                      <div id="modal1" class="modal">
+                        <div class="modal-content">
+                          <span class="close" onclick="closeModal('modal1')">&times;</span>
+                            <h2>Banking System</h2>
+                            <p>This is Image 1 description.</p>
+                              <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                      <button onclick="filterSelection('all')" class="active">All</button>
+                      <button onclick="filterSelection('image')">Images</button>
+                      <button onclick="filterSelection('video')">Videos</button>
+                    </div>    
+                            <!-- Scrollable Content -->
+                            <div class="scroll-container">
+                              <div class="itm image scroll-item"><img src="images/hero.jpg" alt="Image 1-1"></div>
+                              <div class="itm image scroll-item"><img src="img1_2.jpg" alt="Image 1-2"></div>
+                              <div class="itm video scroll-item"><video controls><source src="video/Banking system .mp4" type="video/mp4"></video></div>
+                              <div class="itm video scroll-item"><video controls><source src="video2.mp4" type="video/mp4"></video></div>
+                            </div>
+                        </div>
+                      </div>
+       
                     <!-- ===  portfolio item end === -->
-                     <!-- ===  portfolio item start === -->
-                     <div class="portfolio-item padd-15">
+                     <!-- ===  portfolio item start 2 === -->
+                     <div class="portfolio-item padd-15"><h4>Expense System</h4>
                       <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-img">
-                          <img src="images/portfolio/portfolio-2.jpg" alt="project-image">
+                          <img src="images/portfolio/portfolio-2.jpg" alt="project-image" onclick="openModal('modal2')">
                         </div>
                       </div>
                     </div>
+                    <!-- Modal 2 -->
+                    <div id="modal2" class="modal">
+                      <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                          <h2>Expense System</h2>
+                          <p>This is Image 2 description.</p>
+                            <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                      <button onclick="filterSelection('all')" class="active">All</button>
+                      <button onclick="filterSelection('image')">Images</button>
+                      <button onclick="filterSelection('video')">Videos</button>
+                    </div>    
+                          <!-- Scrollable Content -->
+                          <div class="scroll-container">
+                            <div class="itm image scroll-item"><img src="images/hero.jpg" alt="Image 1-1"></div>
+                            <div class="itm image scroll-item"><img src="img1_2.jpg" alt="Image 1-2"></div>
+                            <div class="itm video scroll-item"><video controls><source src="video/ExpensesUser.mp4" type="video/mp4"></video></div>
+                            <div class="itm video scroll-item"><video controls><source src="video2.mp4" type="video/mp4"></video></div>
+                          </div>
+                      </div>
+                    </div>
                   <!-- ===  portfolio item end === -->
-                   <!-- ===  portfolio item start === -->
-                   <div class="portfolio-item padd-15">
+                   <!-- ===  portfolio item start 3 === -->
+                   <div class="portfolio-item padd-15"><h4>Weather Project</h4>
                     <div class="portfolio-item-inner shadow-dark">
                       <div class="portfolio-img">
-                        <img src="images/portfolio/portfolio-3.jpg" alt="project-image">
+                        <img src="images/portfolio/portfolio-3.jpg" alt="project-image" onclick="openModal('modal3')">
                       </div>
                     </div>
                   </div>
+                <!-- Modal 3 -->
+                <div id="modal3" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                      <h2>Weather Project</h2>
+                      <p>This is Image 3 description.</p>
+                        <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                      <button onclick="filterSelection('all')" class="active">All</button>
+                      <button onclick="filterSelection('image')">Images</button>
+                      <button onclick="filterSelection('video')">Videos</button>
+                    </div>
+                      <!-- Scrollable Content -->
+                      <div class="scroll-container">
+                        <div class="itm image scroll-item"><img src="images/hero.jpg" alt="Image 1-1"></div>
+                        <div class="itm image scroll-item"><img src="img1_2.jpg" alt="Image 1-2"></div>
+                        <div class="itm video scroll-item"><video controls><source src="video/2024-12-21 19-27-42.mp4" type="video/mp4"></video></div>
+                        <div class="itm video scroll-item"><video controls><source src="video2.mp4" type="video/mp4"></video></div>
+                      </div>
+                  </div>
+                </div>      
                 <!-- ===  portfolio item end === -->
-                 <!-- ===  portfolio item start === -->
-                 <div class="portfolio-item padd-15">
+                 <!-- ===  portfolio item start 4 === -->
+                 <div class="portfolio-item padd-15"><h4>image 4th</h4>
                   <div class="portfolio-item-inner shadow-dark">
                     <div class="portfolio-img">
-                      <img src="images/portfolio/portfolio-4.jpg" alt="project-image">
+                      <img src="images/portfolio/portfolio-4.jpg" alt="project-image" onclick="openModal('modal4')">
                     </div>
                   </div>
                 </div>
+                <!-- Modal 4 -->
+                <div id="modal4" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                      <h2>Image 4 Details</h2>
+                      <p>This is Image 4 description.</p>
+                        <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                      <button onclick="filterSelection('all')" class="active">All</button>
+                      <button onclick="filterSelection('image')">Images</button>
+                      <button onclick="filterSelection('video')">Videos</button>
+                    </div>
+                      <!-- Scrollable Content -->
+                      <div class="scroll-container">
+                        <div class="itm image scroll-item"><img src="images/hero.jpg" alt="Image 1-1"></div>
+                        <div class="itm image scroll-item"><img src="img1_2.jpg" alt="Image 1-2"></div>
+                        <div class="itm video scroll-item"><video controls><source src="video/2024-12-21 19-27-42.mp4" type="video/mp4"></video></div>
+                        <div class="itm video scroll-item"><video controls><source src="video2.mp4" type="video/mp4"></video></div>
+                      </div>
+                  </div>
+                </div>    
               <!-- ===  portfolio item end === -->
-               <!-- ===  portfolio item start === -->
-               <div class="portfolio-item padd-15">
+               <!-- ===  portfolio item start 5 === -->
+               <div class="portfolio-item padd-15"><h4>image 5th</h4>
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <img src="images/portfolio/portfolio-5.jpg" alt="project-image">
+                    <img src="images/portfolio/portfolio-5.jpg" alt="project-image" onclick="openModal('modal5')">
                   </div>
                 </div>
               </div>
+                <!-- Modal 5 -->
+                <div id="modal5" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
+                      <h2>Image 5 Details</h2>
+                      <p>This is Image 5 description.</p>
+                        <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                      <button onclick="filterSelection('all')" class="active">All</button>
+                      <button onclick="filterSelection('image')">Images</button>
+                      <button onclick="filterSelection('video')">Videos</button>
+                    </div>
+                      <!-- Scrollable Content -->
+                      <div class="scroll-container">
+                        <div class="itm image scroll-item"><img src="images/hero.jpg" alt="Image 1-1"></div>
+                        <div class="itm image scroll-item"><img src="img1_2.jpg" alt="Image 1-2"></div>
+                        <div class="itm video scroll-item"><video controls><source src="video/2024-12-21 19-27-42.mp4" type="video/mp4"></video></div>
+                        <div class="itm video scroll-item"><video controls><source src="video2.mp4" type="video/mp4"></video></div>
+                      </div>
+                  </div>
+                </div>  
             <!-- ===  portfolio item end === -->
-             <!-- ===  portfolio item start === -->
-             <div class="portfolio-item padd-15">
+             <!-- ===  portfolio item start 6 === -->
+             <div class="portfolio-item padd-15"><h4>image 6th</h4>
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio-6.jpg" alt="project-image">
+                  <img src="images/portfolio/portfolio-6.jpg" alt="project-image" onclick="openModal('modal6')">
                 </div>
               </div>
             </div>
+              <!-- Modal 6 -->
+              <div id="modal6" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <h2>Image 6 Details</h2>
+                    <p>This is Image 6 description.</p>
+                       <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                      <button onclick="filterSelection('all')" class="active">All</button>
+                      <button onclick="filterSelection('image')">Images</button>
+                      <button onclick="filterSelection('video')">Videos</button>
+                    </div>
+                    <!-- Scrollable Content -->
+                  <div class="scroll-container">
+                    <div class="itm image scroll-item"><img src="images/hero.jpg" alt="Image 1-1"></div>
+                    <div class="itm image scroll-item"><img src="img1_2.jpg" alt="Image 1-2"></div>
+                    <div class="itm video scroll-item"><video controls><source src="video/2024-12-21 19-27-42.mp4" type="video/mp4"></video></div>
+                    <div class="itm video scroll-item"><video controls><source src="video2.mp4" type="video/mp4"></video></div>
+                  </div>
+                </div>
+              </div>
           <!-- ===  portfolio item end === -->
                   </div>
                 </div>
@@ -474,24 +621,8 @@
 
         </div>
   <!--main contaner end-->
-  <!-- ==== Style switcher start  ======-->
-   <div class="style-switcher">
-    <div class="style-switcher-toggler s-icon">
-      <i class="fas fa-cog fa-spin"></i>
-    </div>
-    <div class="day-night s-icon">
-      <i class="fas "></i>
-    </div>
-    <h4>Theme Colors</h4>
-    <div class="colors">
-      <span class="color-1" onclick="setActiveStyle('color-1')" ></span>
-      <span class="color-2" onclick="setActiveStyle('color-2')" ></span>
-      <span class="color-3" onclick="setActiveStyle('color-3')" ></span>
-      <span class="color-4" onclick="setActiveStyle('color-4')" ></span>
-      <span class="color-5" onclick="setActiveStyle('color-5')" ></span>
-    </div>
-   </div>
-   <!-- ==== Style switcher End  ======-->
+  
+    
     <!-- === JS Files  ===== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/script.js"></script>
@@ -501,6 +632,8 @@
 <!-- Receive email in Java Scipt use  Start -->
 <script src=" https://smtpjs.com/v3/smtp.js"></script>
       <script>
+
+
         const form = document.querySelector("form");
         const name = document.getElementById("name");
         const email = document.getElementById("email");

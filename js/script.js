@@ -104,3 +104,31 @@ const navToggleBtn = document.querySelector(".nav-toggler"),
         allSection[i].classList.toggle("open");
       }
 }
+
+
+        // Image Open
+        function openModal(modalId) {
+          document.getElementById(modalId).style.display = "flex";
+        }
+        
+        function closeModal(modalId) {
+          document.getElementById(modalId).style.display = "none";
+        }
+
+// ✅ Filter Function
+function filterSelection(category) {
+  let items = document.querySelectorAll('.itm');
+  let buttons = document.querySelectorAll('.filter-buttons button');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  items.forEach(item => {
+      item.style.display = (category === "all" || item.classList.contains(category)) ? "block" : "none";
+  });
+}
+
+
+// document.querySelector(".s-icon").addEventListener("click", function () {
+//   document.querySelector(".style-switcher").classList.toggle("open");
+// });

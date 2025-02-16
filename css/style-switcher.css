@@ -1,8 +1,9 @@
 .style-switcher
 {
   position: fixed;
-  right: 0;
-  top: 60px;
+  left: 0;
+  bottom: 20px;
+  top: auto;
   padding: 15px;
   width: 200px;
   border: 1px solid var(--bg-black-50);
@@ -10,11 +11,11 @@
   z-index: 101;
   border-radius: 5px;
   transition: all 0.3s ease;
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .style-switcher.open
 {
-  transform: translateX(-25px);
+  transform: translateX(25px);
 }
 .style-switcher .s-icon
 {
@@ -25,9 +26,9 @@
   font-size: 20px;
   background: var(--bg-black-100);
   color: var(--text-black-900);
-  right: 100%;
+  left: 100%;
   border: 1px solid var(--bg-black-50);
-  margin-right: 25px;
+  margin-left: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 50%;
@@ -84,4 +85,23 @@
 .style-switcher .color-5
 {
   background: #f021b2;
+}
+
+
+@media screen and (max-width: 768px) {
+  .style-switcher {
+    position: absolute;
+    left: 80%;
+    bottom: 20px;
+    transform: translateX(-100%);
+    width: 180px;
+    opacity: 1;
+  }
+
+  .style-switcher .s-icon {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    transform: translateX(-50%);
+  }
 }
